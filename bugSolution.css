@@ -1,0 +1,13 @@
+The following CSS code provides a more robust solution for creating square divs:
+
+```css
+div {
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  background-color: lightblue;
+  box-sizing: border-box; /* ensures padding is included in total width */
+}
+```
+
+This solution uses the `padding-bottom` and `box-sizing` properties together to create the square.  By setting `box-sizing: border-box;`, we ensure that the padding is included within the total width calculation. This prevents issues caused by margin collapsing, and unexpected interactions with other elements.
