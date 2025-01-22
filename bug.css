@@ -1,0 +1,17 @@
+The following CSS code snippet causes unexpected behavior in certain browsers:
+
+```css
+div {
+  width: 50%;
+  height: 50%;
+  background-color: lightblue;
+}
+
+div::before {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+```
+
+The `padding-bottom: 100%;` trick is commonly used to create a square div with a specified width. However, in some browsers, this may cause unexpected rendering issues when combined with other CSS properties such as `box-sizing`, `margin`, or `float`. This can lead to inaccurate sizing of the element.
